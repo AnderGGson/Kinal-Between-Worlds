@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrKinaleroDash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrKinaleroDash",
+  "parent":{
+    "name":"Kinalero",
+    "path":"folders/Scripts/Kinalero.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

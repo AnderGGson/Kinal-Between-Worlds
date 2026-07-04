@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrObjetosSolidos",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrObjetosSolidos",
+  "parent":{
+    "name":"Personajes",
+    "path":"folders/Scripts/Personajes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

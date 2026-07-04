@@ -60,3 +60,55 @@ Temporary Items
 
 # GMRT build directory
 Build
+
+
+# =========================
+# GameMaker project cache / temp
+# =========================
+cache/
+runtimeCache/
+temp/
+.tmp/
+
+# =========================
+# GameMaker build outputs
+# =========================
+out/
+build/
+Build/
+YYC/
+
+# =========================
+# Exported builds
+# =========================
+*.exe
+*.dll
+*.apk
+*.aab
+*.ipa
+*.app
+*.zip
+*.7z
+*.gz
+
+# =========================
+# Logs
+# =========================
+*.log
+log.txt
+
+# =========================
+# Windows junk
+# =========================
+Thumbs.db
+Desktop.ini
+
+# =========================
+# GameMaker local user settings
+# =========================
+*.local
+*.user
+*.prefs
+*.bak
+*.sublime-workspace
+*.code-workspace
