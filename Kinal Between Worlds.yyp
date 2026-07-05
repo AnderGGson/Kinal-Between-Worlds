@@ -19,6 +19,7 @@
     {"$GMFolder":"","%Name":"enemigos","folderPath":"folders/Objetos/controladores/SistemaJuego/enemigos.yy","name":"enemigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Kinalero","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero.yy","name":"Kinalero","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Armas","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero/Armas.yy","name":"Armas","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Muerte","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero/Muerte.yy","name":"Muerte","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Salas","folderPath":"folders/Salas.yy","name":"Salas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Kinalero","folderPath":"folders/Scripts/Kinalero.yy","name":"Kinalero","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -45,7 +46,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Kinal Between Worlds",
   "resources":[
@@ -59,7 +60,9 @@
     {"id":{"name":"obj_enemigo_parent","path":"objects/obj_enemigo_parent/obj_enemigo_parent.yy",},},
     {"id":{"name":"obj_enemigo_uno","path":"objects/obj_enemigo_uno/obj_enemigo_uno.yy",},},
     {"id":{"name":"obj_kinalero","path":"objects/obj_kinalero/obj_kinalero.yy",},},
+    {"id":{"name":"obj_pantalla_muerte","path":"objects/obj_pantalla_muerte/obj_pantalla_muerte.yy",},},
     {"id":{"name":"obj_Pausa","path":"objects/obj_Pausa/obj_Pausa.yy",},},
+    {"id":{"name":"Debug_cris","path":"rooms/Debug_cris/Debug_cris.yy",},},
     {"id":{"name":"Debug","path":"rooms/Debug/Debug.yy",},},
     {"id":{"name":"Main","path":"rooms/Main/Main.yy",},},
     {"id":{"name":"scrKinaleroArmaActual","path":"scripts/scrKinaleroArmaActual/scrKinaleroArmaActual.yy",},},
@@ -124,6 +127,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Main","path":"rooms/Main/Main.yy",},},
     {"roomId":{"name":"Debug","path":"rooms/Debug/Debug.yy",},},
+    {"roomId":{"name":"Debug_cris","path":"rooms/Debug_cris/Debug_cris.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

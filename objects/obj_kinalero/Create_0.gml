@@ -15,3 +15,5 @@ arma = {
 hp = 4;
 totalHp = hp;
 dano = 1;
+
+randomise();
