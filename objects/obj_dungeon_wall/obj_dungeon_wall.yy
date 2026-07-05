@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objProcedural",
+  "%Name":"obj_dungeon_wall",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objProcedural",
+  "name":"obj_dungeon_wall",
   "overriddenProperties":[],
   "parent":{
     "name":"SistemaGeneral",
@@ -32,5 +31,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
