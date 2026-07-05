@@ -112,3 +112,9 @@ Desktop.ini
 *.bak
 *.sublime-workspace
 *.code-workspace
+
+
+# =========================
+# Debug Tools
+# =========================
+/rooms/Debug

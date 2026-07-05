@@ -14,6 +14,5 @@ function scrKinaleroMovimiento() {
     } else {
         accion = "Quieto";
     }
-	
 
 }
