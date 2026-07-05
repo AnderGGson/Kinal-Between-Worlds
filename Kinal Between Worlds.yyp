@@ -20,6 +20,7 @@
     {"$GMFolder":"","%Name":"enemigos","folderPath":"folders/Objetos/controladores/SistemaJuego/enemigos.yy","name":"enemigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Kinalero","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero.yy","name":"Kinalero","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Armas","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero/Armas.yy","name":"Armas","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Muerte","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero/Muerte.yy","name":"Muerte","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"proyectiles","folderPath":"folders/Objetos/controladores/SistemaJuego/Kinalero/proyectiles.yy","name":"proyectiles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Mapas","folderPath":"folders/Objetos/controladores/SistemaJuego/Mapas.yy","name":"Mapas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Salas","folderPath":"folders/Salas.yy","name":"Salas","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -59,7 +60,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Kinal Between Worlds",
   "resources":[
@@ -76,9 +77,11 @@
     {"id":{"name":"obj_enemigo_parent","path":"objects/obj_enemigo_parent/obj_enemigo_parent.yy",},},
     {"id":{"name":"obj_enemigo_uno","path":"objects/obj_enemigo_uno/obj_enemigo_uno.yy",},},
     {"id":{"name":"obj_kinalero","path":"objects/obj_kinalero/obj_kinalero.yy",},},
+    {"id":{"name":"obj_pantalla_muerte","path":"objects/obj_pantalla_muerte/obj_pantalla_muerte.yy",},},
     {"id":{"name":"obj_lapiz","path":"objects/obj_lapiz/obj_lapiz.yy",},},
     {"id":{"name":"obj_Nivel","path":"objects/obj_Nivel/obj_Nivel.yy",},},
     {"id":{"name":"obj_Pausa","path":"objects/obj_Pausa/obj_Pausa.yy",},},
+    {"id":{"name":"Debug_cris","path":"rooms/Debug_cris/Debug_cris.yy",},},
     {"id":{"name":"obj_secuencias","path":"objects/obj_secuencias/obj_secuencias.yy",},},
     {"id":{"name":"objProcedural","path":"objects/objProcedural/objProcedural.yy",},},
     {"id":{"name":"Debug","path":"rooms/Debug/Debug.yy",},},
@@ -161,6 +164,8 @@
     {"roomId":{"name":"Debug","path":"rooms/Debug/Debug.yy",},},
     {"roomId":{"name":"Main","path":"rooms/Main/Main.yy",},},
     {"roomId":{"name":"mainTutorial","path":"rooms/mainTutorial/mainTutorial.yy",},},
+    {"roomId":{"name":"Debug","path":"rooms/Debug/Debug.yy",},},
+    {"roomId":{"name":"Debug_cris","path":"rooms/Debug_cris/Debug_cris.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
