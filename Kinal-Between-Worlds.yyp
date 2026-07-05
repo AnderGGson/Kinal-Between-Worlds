@@ -92,6 +92,7 @@
     {"id":{"name":"scrActualizacionArma","path":"scripts/scrActualizacionArma/scrActualizacionArma.yy",},},
     {"id":{"name":"scrArmasKinalero","path":"scripts/scrArmasKinalero/scrArmasKinalero.yy",},},
     {"id":{"name":"scrColisionAsset","path":"scripts/scrColisionAsset/scrColisionAsset.yy",},},
+    {"id":{"name":"scrGenAutoWalls","path":"scripts/scrGenAutoWalls/scrGenAutoWalls.yy",},},
     {"id":{"name":"scrGenDungeon","path":"scripts/scrGenDungeon/scrGenDungeon.yy",},},
     {"id":{"name":"scrGenGraph","path":"scripts/scrGenGraph/scrGenGraph.yy",},},
     {"id":{"name":"scrGenTemplates","path":"scripts/scrGenTemplates/scrGenTemplates.yy",},},

@@ -77,8 +77,9 @@ function scrGenSelectTemplates(_nodes, _templates) {
 		array_push(usedIds, node.templateId);
 
 		var tmpl = _templates[node.templateId];
-		node.w = tmpl.w;
-		node.h = tmpl.h;
+		node.h = array_length(tmpl.walls);
+		node.w = node.h > 0 ? array_length(tmpl.walls[0]) : 0;
+		node.doors = scrGenDetectDoors(tmpl);
 	}
 }
 
@@ -93,6 +94,33 @@ function scrGenPositionRooms(_nodes) {
 		_nodes[i].posX = col * (_nodes[i].w + spacing);
 		_nodes[i].posY = row * (_nodes[i].h + spacing);
 	}
+}
+
+function scrGenDetectDoors(_tmpl) {
+	var walls = _tmpl.walls;
+	var h = array_length(walls);
+	if (h == 0) return [];
+	var w = array_length(walls[0]);
+	var doors = [];
+
+	// Top edge
+	for (var xx = 0; xx < w; xx++) {
+		if (walls[0][xx] == 0) array_push(doors, {x: xx, y: 0, dir: "N"});
+	}
+	// Bottom edge
+	for (var xx = 0; xx < w; xx++) {
+		if (walls[h-1][xx] == 0) array_push(doors, {x: xx, y: h-1, dir: "S"});
+	}
+	// Left edge
+	for (var yy = 0; yy < h; yy++) {
+		if (walls[yy][0] == 0) array_push(doors, {x: 0, y: yy, dir: "W"});
+	}
+	// Right edge
+	for (var yy = 0; yy < h; yy++) {
+		if (walls[yy][w-1] == 0) array_push(doors, {x: w-1, y: yy, dir: "E"});
+	}
+
+	return doors;
 }
 
 function scrGenBuildFloor(_nodes, _templates) {
@@ -186,11 +214,9 @@ function scrGenCarveCorridors(_floor, _nodes, _templates) {
 function scrGenCarveOneCorridor(_floor, _nodes, _templates, _a, _b) {
 	var nodeA = _nodes[_a];
 	var nodeB = _nodes[_b];
-	var tmplA = _templates[nodeA.templateId];
-	var tmplB = _templates[nodeB.templateId];
 
-	var doorsA = tmplA.doors;
-	var doorsB = tmplB.doors;
+	var doorsA = nodeA.doors;
+	var doorsB = nodeB.doors;
 
 	var startX, startY, endX, endY;
 
@@ -249,9 +275,7 @@ function scrGenCarveLShape(_floor, _x1, _y1, _x2, _y2) {
 		for (var wy = -hw; wy <= hw; wy++) {
 			var gy = midY + wy;
 			if (gy >= 0 && gy < _floor.tileH && xx >= 0 && xx < _floor.tileW) {
-				if (_floor.tileData[gy][xx] == 0) {
-					_floor.tileData[gy][xx] = 2;
-				}
+				_floor.tileData[gy][xx] = 2;
 				_floor.wallMap[gy][xx] = 0;
 			}
 		}
@@ -265,9 +289,7 @@ function scrGenCarveLShape(_floor, _x1, _y1, _x2, _y2) {
 		for (var wx = -hw; wx <= hw; wx++) {
 			var gx = midX + wx;
 			if (yy >= 0 && yy < _floor.tileH && gx >= 0 && gx < _floor.tileW) {
-				if (_floor.tileData[yy][gx] == 0) {
-					_floor.tileData[yy][gx] = 2;
-				}
+				_floor.tileData[yy][gx] = 2;
 				_floor.wallMap[yy][gx] = 0;
 			}
 		}
@@ -304,9 +326,10 @@ function scrGenRenderToRoom(_floor) {
 	for (var yy = 0; yy < _floor.tileH; yy++) {
 		for (var xx = 0; xx < _floor.tileW; xx++) {
 			if (_floor.wallMap[yy][xx] == 1) {
+				var wallTile = _floor.tileData[yy][xx];
 				for (var dy = 0; dy < tileScale; dy++) {
 					for (var dx = 0; dx < tileScale; dx++) {
-						tilemap_set(tmId, 1, xx * tileScale + dx, yy * tileScale + dy);
+						tilemap_set(tmId, wallTile, xx * tileScale + dx, yy * tileScale + dy);
 					}
 				}
 			}
@@ -338,6 +361,23 @@ function scrGenRenderToRoom(_floor) {
 		}
 
 		camera_set_view_pos(camId, startCX - viewW / 2, startCY - viewH / 2);
+	}
+
+	var nivelObj = asset_get_index("obj_Nivel");
+	if (nivelObj != -1 && array_length(_floor.rooms) > 0) {
+		var maxDepth = -1;
+		var deepestRoom = _floor.rooms[0];
+		for (var i = 0; i < array_length(_floor.rooms); i++) {
+			if (_floor.rooms[i].depth > maxDepth) {
+				maxDepth = _floor.rooms[i].depth;
+				deepestRoom = _floor.rooms[i];
+			}
+		}
+		var nCX = (deepestRoom.posX + floor(deepestRoom.w / 2)) * tileSize;
+		var nCY = (deepestRoom.posY + floor(deepestRoom.h / 2)) * tileSize;
+		if (instance_number(nivelObj) == 0) {
+			instance_create_layer(nCX, nCY, "Instances", nivelObj);
+		}
 	}
 
 	global.floorData = _floor;

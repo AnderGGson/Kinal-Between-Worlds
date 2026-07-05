@@ -1,6 +1,7 @@
-piso = 250;
+randomize();
+piso = 1;
 autoGenerate = true;
-debugDraw = true;
+debugDraw = false;
 
 if (autoGenerate) {
 	var fd = scrGenDungeon(piso);
