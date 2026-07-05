@@ -25,8 +25,8 @@
   ],
   "name":"Debug",
   "parent":{
-    "name":"Kinal Between Worlds",
-    "path":"Kinal Between Worlds.yyp",
+    "name":"Kinal-Between-Worlds",
+    "path":"Kinal-Between-Worlds.yyp",
   },
   "parentRoom":null,
   "physicsSettings":{
