@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndBlipText",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "channelFormat":2,
+  "compression":0,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":8.832018,
+  "exportDir":"",
+  "name":"sndBlipText",
+  "parent":{
+    "name":"Sonidos",
+    "path":"folders/Sonidos.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"sndBlipText.mp3",
+  "volume":1.0,
+}

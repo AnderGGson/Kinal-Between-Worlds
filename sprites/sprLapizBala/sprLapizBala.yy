@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Armas",
-    "path":"folders/Sprites/Armas.yy",
+    "name":"proyectiles",
+    "path":"folders/Sprites/Kinalero/proyectiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

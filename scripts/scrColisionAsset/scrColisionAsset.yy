@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrColisionAsset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrColisionAsset",
+  "parent":{
+    "name":"Personajes",
+    "path":"folders/Scripts/Personajes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

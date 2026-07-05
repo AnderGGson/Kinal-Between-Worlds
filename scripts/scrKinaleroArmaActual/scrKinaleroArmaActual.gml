@@ -1,26 +1,23 @@
-function scrKinaleroArmaActual() {
-    // Si no hay arma equipada, salir de la función
-    if (arma == noone) { exit; }
+function scrKinaleroArmaActual(vel, tipo_bala, posOrigenBalaX, posOrigenBalaY) {
 	
-    if (!layer_exists("balas")) {
-    layer_create(0, "balas");
-    }
+	if (!layer_exists("balas")) {
+            layer_create(0, "balas");
+			}
+	
+    if (conjuntoArmas[arma.indice] == noone) { exit; }
 
-    // Calcular el ángulo entre el jugador (ligeramente desplazado hacia arriba) y el mouse
-    // Esto sirve para que el arma apunte hacia donde está el cursor
-    arma.angulo = point_direction(x, y -13 , mouse_x, mouse_y);
-    
-    // Si se presiona el botón izquierdo del mouse (solo una vez)
-    if (mouse_check_button_pressed(mb_left)) {
-        // Calcular la posición inicial de la bala (13 píxeles desde el jugador en dirección al ángulo del arma)
-        var bx = x + lengthdir_x(13, arma.angulo);
-        var by = y -13 + lengthdir_y(13, arma.angulo);
-        
-        // Crear la bala (obj_bala) en la capa "Instances" en la posición calculada
-        var bala = instance_create_layer(bx, by,"balas", obj_bala);
+    arma.angulo = point_direction(x , y , mouse_x, mouse_y);
+    arma.frecuencia -= 1;
 
-		// Asignar velocidad y dirección a la bala
-        bala.speed = 5;
+    if (mouse_check_button(mb_left) && conjuntoArmas[arma.indice].municion > 0 && arma.frecuencia <= 0) {
+        var bx = x + posOrigenBalaX + lengthdir_x(10, arma.angulo);
+        var by = y + posOrigenBalaY + lengthdir_y(10, arma.angulo);
+
+        var bala = instance_create_layer(bx, by, "balas", tipo_bala);
+        bala.speed = vel;
         bala.direction = arma.angulo;
+
+        conjuntoArmas[arma.indice].municion -= 1;
+        arma.frecuencia = conjuntoArmas[arma.indice].frecuencia;
     }
 }

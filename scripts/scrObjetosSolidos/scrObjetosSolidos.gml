@@ -1,4 +1,4 @@
 function scrObjetosSolidos(){
 
-return [obj_Blanco,objProcedural]
+return [obj_Blanco]
 }

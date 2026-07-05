@@ -1,7 +1,5 @@
 function scrPersonajeMovimientoA(spd, dir) {
-	
-	
-    var tilemap_id = !layer_tilemap_get_id("bckTileset");
+    var tilemap_id = layer_tilemap_get_id("tileColision");
     var arr = scrObjetosSolidos();
 	
     // Intentamos movernos tratando colisión suave con ángulos

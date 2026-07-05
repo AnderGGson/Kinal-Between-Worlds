@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrArmasKinalero",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrArmasKinalero",
+  "parent":{
+    "name":"Kinalero",
+    "path":"folders/Scripts/Kinalero.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

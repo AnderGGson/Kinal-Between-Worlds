@@ -6,8 +6,8 @@ if (alarm[0] < 0){
 	
 	if (hp <= 0) {
 		room_restart();
-		x = 20;
-		y = 980;
+       x = 85;
+       y = 983;
 		hp = totalHp;
 	}
 }

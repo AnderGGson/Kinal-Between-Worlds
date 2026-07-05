@@ -20,6 +20,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"44098e8d-b30f-4c3e-a05e-43947db68d43","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"44098e8d-b30f-4c3e-a05e-43947db68d43","opacity":20.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"47361ffa-c549-4bd5-91bc-a055f352b487","blendMode":0,"displayName":"default","isLocked":false,"name":"47361ffa-c549-4bd5-91bc-a055f352b487","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprKinaleroQuietoAbajo",
